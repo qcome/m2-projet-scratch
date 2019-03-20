@@ -1,0 +1,18 @@
+#Spring Cloud
+#Config
+spring:
+  application:
+    name: registry-service
+  profiles:
+      active: dev
+      include: composite
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations: classpath:/central-config
+        bootstrap: true
+        prefix: /config
+      fail-fast: true
+      name: registry-service

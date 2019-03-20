@@ -1,0 +1,11 @@
+configserver:
+    name: JHipster Registry config server
+    status: Connected to the JHipster Registry config server!
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka/

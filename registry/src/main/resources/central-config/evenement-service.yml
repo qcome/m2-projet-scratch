@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  jackson:
+    serialization:
+      indent-output: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:file:./evenement-service/target/h2db/db/evenement;DB_CLOSE_DELAY=-1
+    username: evenement
+    password:
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database: H2
+    properties:
+      hibernate.ddl-auto: create
+    generate-ddl: true
